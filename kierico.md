@@ -1,0 +1,8 @@
+# Ignite Timer
+
+## Styled-Components
+
+> `npm i styled-components`
+
+> `npm i @types/styled-components -D`
+
