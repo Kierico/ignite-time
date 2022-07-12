@@ -37,7 +37,7 @@ All
 
 ```json
     "scripts": {
-        "lint": "eslint src --ext .ts,.tsx,"
+        "lint": "eslint src --ext .ts,.tsx"
     },
 ```
 
@@ -47,4 +47,8 @@ All
 > `npm run lint --fix`
 
 <hr/><br/>
+
+## React Router DOM
+
+> `npm i react-router-dom`
 
