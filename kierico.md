@@ -52,3 +52,7 @@ All
 
 > `npm i react-router-dom`
 
+## Phosphor React
+
+> `npm i phosphor-react`
+
