@@ -6,6 +6,12 @@
 
 > `npm i @types/styled-components -D`
 
+```ts
+    import styled from 'styled-components'
+
+    export const FormContainer = styled.div``;
+```
+
 <hr/><br/>
 
 ## ESLint
@@ -52,11 +58,19 @@ All
 
 > `npm i react-router-dom`
 
+```ts
+    import { } from 'react-router-dom'
+```
+
 <hr/><br/>
 
 ## Phosphor React
 
 > `npm i phosphor-react`
+
+```ts
+    import { } from 'phosphor-react'
+```
 
 <hr/><br/>
 
@@ -66,4 +80,30 @@ All
 
 > `npm i react-hook-form`
 
+```ts
+    import { useForm } from 'react-hook-form'
+```
+
 <hr/><br/>
+
+## Zod - validação de Formulários
+
+[ <img style="height: 60px;" src="https://zod.dev/logo.svg" /> ](https://zod.dev/)
+
+> `npm i zod`
+
+```ts
+    /** import sem export default */
+    import * as zod from 'zod'
+```
+
+### Integrado o Reac Hook Form à Zod
+
+> `npm install @hookform/resolvers`
+
+```ts
+    import { zodResolver } from '@hookform/resolvers/zod'
+```
+
+<hr/><br/>
+
