@@ -41,6 +41,9 @@ export function Home() {
   const [cycles, setCycles] = useState<Cycle[]>([])
   const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
 
+  /** armazena o tanto de segundos que já se passaram desde o início do ciclo */
+  const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
+
   const { register, handleSubmit, watch, reset, formState } =
     useForm<NewCycleFormData>({
       resolver: zodResolver(newCycleFormValidationSchema),
@@ -66,6 +69,22 @@ export function Home() {
   }
 
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
+
+  /** converte minutos em segundos */
+  const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
+
+  /** calcula o tanto que já se passou */
+  const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
+
+  /** calcula o total de minutos */
+  const minutesAmount = Math.floor(currentSeconds / 60)
+
+  /** calcula quantos seguntos tem do resto da divisão (calcula o total de minutos). */
+  const secondsAmount = currentSeconds % 60
+
+  /** converte (minutesAmount) para string, para preencher com qualquer caractere */
+  const minutes = String(minutesAmount).padStart(2, '0')
+  const seconds = String(secondsAmount).padStart(2, '0')
 
   console.log(formState.errors)
 
@@ -106,11 +125,11 @@ export function Home() {
         </FormContainer>
 
         <CountdownContainer>
-          <span>0</span>
-          <span>0</span>
+          <span>{minutes[0]}</span>
+          <span>{minutes[1]}</span>
           <Separator>:</Separator>
-          <span>0</span>
-          <span>0</span>
+          <span>{seconds[0]}</span>
+          <span>{seconds[1]}</span>
         </CountdownContainer>
 
         <StartCountdownButton type="submit" disabled={isSubmitDisabled}>
