@@ -107,3 +107,14 @@ All
 
 <hr/><br/>
 
+## Date-fns
+### 4.4 reduzindo countdown
+
+> `npm i date-fns`
+
+```ts
+    import { differenceInSeconds } from 'date-fns'
+```
+
+<hr/><br/>
+
