@@ -118,3 +118,15 @@ All
 
 <hr/><br/>
 
+## immer
+
+[ <img src="https://immerjs.github.io/immer/img/immer-logo.svg" style="width: 100px;" > ](https://immerjs.github.io/immer/)
+
+    Crie o próximo estado imutável alterando o atual.
+
+> `npm i immer`
+
+[immer Github](https://github.com/immerjs/immer)
+
+<hr/><br/>
+
