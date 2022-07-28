@@ -1,5 +1,4 @@
 import { differenceInSeconds } from 'date-fns'
-import { cy } from 'date-fns/locale'
 import {
   createContext,
   ReactNode,
@@ -8,7 +7,6 @@ import {
   useEffect,
 } from 'react'
 import {
-  ActionTypes,
   addNewCycleAction,
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
